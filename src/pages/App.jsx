@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react"; // Importa as funções 'useEffect' e 'useState' do módulo 'react'
 
 import logo from "../assets/devflix.png"; // Importa o arquivo de imagem 'devflix.png' do diretório '../assets'
@@ -9,6 +7,7 @@ import searchIcon from "../assets/search.svg"; // Importa o arquivo de imagem 's
 import "./App.css"; // Importa o arquivo de estilo CSS 'App.css'
 import MovieCard from "../componentes/movieCard/movieCard";
 import Serie from "./serie.jsx";
+import Footer from "../componentes/footer/footer";
 
 const App = () => {
   // Declaração do componente funcional 'App'
@@ -45,11 +44,12 @@ const App = () => {
       {/*Elemento raiz do componente*/}
       <div className="logo">
         {/* Div para exibir o logo */}
-       <a href={Serie}> <img src={logo} alt="logo devflix" />
-          </a> {/* Exibe a imagem do logo importada */}
+        <a href={Serie}>
+          {" "}
+          <img src={logo} alt="logo devflix" />
+        </a>{" "}
+        {/* Exibe a imagem do logo importada */}
       </div>
-      
-
       <div className="search">
         {/* Div para a barra de pesquisa */}
         <input
@@ -68,17 +68,30 @@ const App = () => {
         />
         {/*Chama a função 'searchMovies' com o valor de 'searchTerm' quando a imagem é clicada */}
       </div>
-      {movies?.length > 0 ? (// Início de uma expressão JSX condicional baseada no tamanho da matriz 'movies'
-        <div className="container">{/* Abre uma div com a classe CSS "container" */}
-          {movies.map((movie) => (/* Renderiza um componente 'MovieCard' passando 'movie' como prop */
-            <MovieCard  key={movie.imdbID} movies={movie}/> /* Renderiza um componente 'MovieCard' passando 'movie' como prop */
-          ))}
-        </div>// Fecha a div com a classe "container"
-      ) : (// Caso contrário, se a matriz 'movies' estiver vazia
-        <div className="empty">{/* Abre uma div com a classe CSS "empty" */}
-          <h2>Nenhum filme encontrado 🥹</h2>   {/* Renderiza um cabeçalho indicando que nenhum filme foi encontrado */}
-        </div>// Fecha a div do 'empty'
-            )}{/*Fim da expressão JSX condicional */}
+      {movies?.length > 0 ? ( // Início de uma expressão JSX condicional baseada no tamanho da matriz 'movies'
+        <div className="container">
+          {/* Abre uma div com a classe CSS "container" */}
+          {movies.map(
+            (
+              movie /* Renderiza um componente 'MovieCard' passando 'movie' como prop */
+            ) => (
+              <MovieCard
+                key={movie.imdbID}
+                movies={movie}
+              /> /* Renderiza um componente 'MovieCard' passando 'movie' como prop */
+            )
+          )}
+        </div> // Fecha a div com a classe "container"
+      ) : (
+        // Caso contrário, se a matriz 'movies' estiver vazia
+        <div className="empty">
+          {/* Abre uma div com a classe CSS "empty" */}
+          <h2>Nenhum filme encontrado 🥹</h2>{" "}
+          {/* Renderiza um cabeçalho indicando que nenhum filme foi encontrado */}
+        </div> // Fecha a div do 'empty'
+      )}
+      {/*Fim da expressão JSX condicional */}
+      <Footer link={"https://github.com/"}>mvn</Footer>
     </div>
   );
 };
