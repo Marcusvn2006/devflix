@@ -6,6 +6,7 @@ import searchIcon from "../assets/search.svg"; // Importa o arquivo de imagem 's
 
 import "./App.css"; // Importa o arquivo de estilo CSS 'App.css'
 import MovieCard from "../componentes/movieCard/movieCard";
+import Serie from "./serie";
 
 const App = () => {
   // Declaração do componente funcional 'App'
@@ -43,8 +44,9 @@ const App = () => {
       <div className="logo">
         {/* Div para exibir o logo */}
         <img src={logo} alt="logo devflix" />
-        {/* Exibe a imagem do logo importada */}
+      {/* Exibe a imagem do logo importada */}
       </div>
+      
       <div className="search">
         {/* Div para a barra de pesquisa */}
         <input
