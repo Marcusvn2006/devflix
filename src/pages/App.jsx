@@ -1,3 +1,5 @@
+
+
 import { useEffect, useState } from "react"; // Importa as funções 'useEffect' e 'useState' do módulo 'react'
 
 import logo from "../assets/devflix.png"; // Importa o arquivo de imagem 'devflix.png' do diretório '../assets'
@@ -6,7 +8,7 @@ import searchIcon from "../assets/search.svg"; // Importa o arquivo de imagem 's
 
 import "./App.css"; // Importa o arquivo de estilo CSS 'App.css'
 import MovieCard from "../componentes/movieCard/movieCard";
-import Serie from "./serie";
+import Serie from "./serie.jsx";
 
 const App = () => {
   // Declaração do componente funcional 'App'
@@ -43,10 +45,11 @@ const App = () => {
       {/*Elemento raiz do componente*/}
       <div className="logo">
         {/* Div para exibir o logo */}
-        <img src={logo} alt="logo devflix" />
-      {/* Exibe a imagem do logo importada */}
+       <a href={Serie}> <img src={logo} alt="logo devflix" />
+          </a> {/* Exibe a imagem do logo importada */}
       </div>
       
+
       <div className="search">
         {/* Div para a barra de pesquisa */}
         <input
