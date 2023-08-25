@@ -103,6 +103,10 @@ border-top-right-radius: 1em;
   .movieModal{
    width:  550px;
   }
+  .containerFlex{
+    
+    padding-top: 0;
+  }
 }
 
 
@@ -112,8 +116,20 @@ border-top-right-radius: 1em;
    margin-top: 2em;
 
   }
+  .movietype h1{
+    font-size: 15pt;
+
+  }
+  .legobitman{
+    padding-top: 6em;
+    display: block;
+  }
   .movieInfo img{
     height: 220px;
+  }
+  .containerFlex{
+    
+    padding-top: 3em;
   }
   .desc{
     padding-bottom: 3.4em;
