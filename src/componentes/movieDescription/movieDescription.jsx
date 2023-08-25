@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./movieDescription.module.css";
 import devFlix from "/favicon.png";
 const MovieDesc = ({ movies, click }) => {
-  const apiKey = "e4d577fa";
+  const apiKey = "927ee5bf";
   const apiUrl = `https://omdbapi.com/?apikey=${apiKey}&i=${movies.imdbID}`;
   const [moviesDesc, setMoviesDesc] = useState([]);
 

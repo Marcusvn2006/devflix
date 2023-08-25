@@ -14,7 +14,7 @@ const App = () => {
 
   const [searchTerm, setSearchTerm] = useState(""); // Declara o estado 'searchTerm' e a função 'setSearchTerm' para atualizá-lo
   const [movies, setMovies] = useState([]);
-  const apiKey = "e4d577fa"; // Declara uma chave de API
+  const apiKey = "927ee5bf"; // Declara uma chave de API
   const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`; // Monta a URL da API com a chave de API
 
   useEffect(() => {

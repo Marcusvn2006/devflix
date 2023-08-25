@@ -38,6 +38,7 @@ border-top-right-radius: 1em;
   height: 480px;
   object-fit: cover;
   object-position: top;
+
 }
 
 .btnClose {
@@ -71,6 +72,7 @@ border-top-right-radius: 1em;
   width: 5%;
   height: 5%;
   border-radius: 0;
+  padding-right: 3px;
 }
  
 .movieType a{
@@ -96,6 +98,7 @@ border-top-right-radius: 1em;
   text-align: justify;
   font-size: 1.2em;
 }
+
 @media screen and (max-width: 768px) {
   .movieModal{
    width:  550px;
@@ -109,8 +112,11 @@ border-top-right-radius: 1em;
    margin-top: 2em;
 
   }
+  .movieInfo img{
+    height: 220px;
+  }
   .desc{
-    padding-bottom: 3.5em;
+    padding-bottom: 3.4em;
   }
 }
 @keyframes fadeIn{
