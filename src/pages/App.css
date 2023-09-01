@@ -34,9 +34,21 @@ body {
   margin: auto;
   display: block;
 }
-.search {
-  width: 70%;
+.searchbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 4rem 0 2rem;
+
+  gap: 1em;
+}
+.searchbar ion-icon{
+  color: #fff;
+  cursor: pointer;
+  font-size: 4em;
+}
+.search {
+  width:30em;
   display: flex;
   justify-content: center;
   align-items: center;

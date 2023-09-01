@@ -5,12 +5,21 @@ import logo from "../assets/devflix.png"; // Importa o arquivo de imagem 'devfli
 import searchIcon from "../assets/search.svg"; // Importa o arquivo de imagem 'search.svg' do diretório '../assets'
 
 import "./App.css"; // Importa o arquivo de estilo CSS 'App.css'
+import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js";
 import MovieCard from "../componentes/movieCard/movieCard";
 import Serie from "./serie.jsx";
 import Footer from "../componentes/footer/footer";
+import Menu from "../componentes/menu/menu";
 
 const App = () => {
   // Declaração do componente funcional 'App'
+
+  const [isMenu, setIsmenu] =useState(true)
+// para fazer o menu
+
+
+
+
 
   const [searchTerm, setSearchTerm] = useState(""); // Declara o estado 'searchTerm' e a função 'setSearchTerm' para atualizá-lo
   const [movies, setMovies] = useState([]);
@@ -38,8 +47,16 @@ const App = () => {
 
   // fetch (apiUrl).then((response) => response.json()).then((data) => console.log(data));outro jeito de fazer o negocio de cima
 
+
+
+const toggleMenu =()=>{
+  setIsmenu (!isMenu)
+  console.log(isMenu)
+}
+// menuuuuuuuuu
   return (
-    <div id="app">
+    <div id="ap
+    p">
       {" "}
       {/*Elemento raiz do componente*/}
       <div className="logo">
@@ -50,7 +67,12 @@ const App = () => {
         </a>{" "}
         {/* Exibe a imagem do logo importada */}
       </div>
+   <div className="searchbar">
+   <ion-icon name="menu" onClick={toggleMenu}></ion-icon>
+   {/* menuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */}
+  {isMenu && <Menu click={toggleMenu}/>}
       <div className="search">
+
         {/* Div para a barra de pesquisa */}
         <input
           value={searchTerm}
@@ -68,6 +90,7 @@ const App = () => {
         />
         {/*Chama a função 'searchMovies' com o valor de 'searchTerm' quando a imagem é clicada */}
       </div>
+   </div>
       {movies?.length > 0 ? ( // Início de uma expressão JSX condicional baseada no tamanho da matriz 'movies'
         <div className="container">
           {/* Abre uma div com a classe CSS "container" */}
